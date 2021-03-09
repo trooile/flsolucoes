@@ -3,7 +3,12 @@
 <div class="container">
     <div id="editor">
     </div>
+    <button type="button" id="submittutorial" class="btn btn-primary btn-lg pull-right">
+        Submit
+    </button>
 </div>
+
+
 
 <?php include "../include/footer.php" ?>
 
