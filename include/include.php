@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<title><?php echo isset($title) ? $title : "PO"; ?></title>
+<title><?php echo isset($title) ? $title : "MeltedSplit"; ?></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -52,7 +52,6 @@
 	<style type='text/css'>
 		
 		@import url('/public/includes/datepicker.min.css');
-		//
 
 	</style>
 
