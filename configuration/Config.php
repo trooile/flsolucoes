@@ -1,6 +1,6 @@
 <?php
 
-namespace Configuracoes;
+namespace Configuration;
 
 use Exception;
 use mysqli;
@@ -9,8 +9,7 @@ class Config
 {
     private
         $bd,
-        $path,
-        $apiKeyPagarMe;
+        $path;
 
     /**
      * Config constructor.
@@ -20,7 +19,7 @@ class Config
     {
         $dir = __DIR__;
 
-        if(isset($_SERVER['USER']) && $_SERVER['USER']=='root'){//cron
+        if(isset($_SERVER['USER']) && $_SERVER['USER']=='root'){
             if(isset($_SERVER['HOSTNAME'])){
                 switch ($_SERVER['HOSTNAME']) {
                     case 'portal.cedet.com.br':
@@ -74,13 +73,6 @@ class Config
                 $pass = "";
                 break;
 
-            case 'portaldev':
-                $database = "portal_homologacao";
-                $user = "cedet_portaldev";
-                $server = "localhost";
-                $pass = "WQNcCZzQHzAAfmBBzz";
-                break;
-
             case '':
                 $database = "";
                 $user = "";
@@ -89,7 +81,7 @@ class Config
                 break;
 
             default:
-                throw new Exception("Parâmetros inválidos 3.", 1);
+                throw new Exception("Invalid 3.", 1);
                 break;
         }
 
@@ -100,15 +92,12 @@ class Config
                             'classes' => "C:\wamp64\www\portal/includes/classes/",
                             'img' => "C:\wamp64\www\portal/img/",
                             'file' => "C:\wamp64\www\portal/files/",
-                            'tmp' => "C:\wamp64\www\portal/tmp/",
-                            'productPictures' => "C:\wamp64\www\portal/files/cadastros/products/");
+                            'tmp' => "C:\wamp64\www\portal/tmp/");
 
         $this->bd = Array('server' => $server, 'user' => $user, 'pass' => $pass, 'database' => $database);
-        $this->apiKeyPagarMe = "ak_live_cMBhHW4PvsIgCoMm3WXEWrUQ2jCdbk";
 
         if(getenv('APPLICATION_ENV') == 'local'){
             $this->bd = Array('server' => "localhost", 'user' => 'root', 'pass' => "", 'database' => 'localtest');
-            $this->apiKeyPagarMe = "ak_live_cMBhHW4PvsIgCoMm3WXEWrUQ2jCdbk";
             $this->path = Array('root' => "/",
                                 'bd' => "includes/bd.php",
                                 'admin' => "admin/",
@@ -116,18 +105,11 @@ class Config
                                 'classes' => "includes/classes/",
                                 'img' => "img/",
                                 'file' => "files/",
-                                'tmp' => "tmp/",
-                                'productPictures' => "files/cadastros/products/");
+                                'tmp' => "tmp/");
         }
     }
 
-    /**
-     * @param $query
-     * @return array
-     * @throws Exception
-     * Executa uma query no Portal
-     */
-    public function executeFromPortal($query)
+    public function executeFromServer($query)
     {
         $server = $this->getDBServer();
         $user = $this->getDBUser();
@@ -233,18 +215,8 @@ class Config
     }
 
     public
-    function getPathImgProducts()
-    {
-        return $this->path['productPictures'];
-    }
-
-    public
     function getPathTmp()
     {
         return $this->path['tmp'];
-    }
-    public function getPagarMeKey()
-    {
-        return $this->apiKeyPagarMe;
     }
 }
