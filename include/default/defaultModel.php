@@ -12,7 +12,7 @@ class DefaultModel
 
             $this->masterMysqli = $masterMysqli;
 
-            if(isset($_SESSION['id_pais'])){
+            if(isset($_SESSION['id_sup'])){
                 $this->id_sup = $_SESSION['id_sup'];
             }else{
                 $this->id_sup = 1; 
@@ -54,7 +54,6 @@ class DefaultModel
     {
         try{
 
-            //jogo no profiler a query
             array_push($GLOBALS['_DB_PROFILER'],$query);
 
             $response = [];
@@ -397,7 +396,7 @@ class DefaultModel
                             $where .=  $column." like('%".$value."%')";
                             break;
                         case 'date':
-                            $where .=  $column." ='".$this->converteData($value)."'";
+                            $where .=  $column." ='".$this->convertData($value)."'";
                             break;
 
                         case 'intin':
