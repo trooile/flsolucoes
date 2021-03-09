@@ -1,8 +1,8 @@
 <?php
-ini_set("display_errors", "1");
-date_default_timezone_set('America/Sao_Paulo');
-error_reporting(E_ALL ^ E_DEPRECATED);
-//include_once $INCLUDE_PATH . 'bd.php';
+	ini_set("display_errors", "1");
+	date_default_timezone_set('America/Sao_Paulo');
+	error_reporting(E_ALL ^ E_DEPRECATED);
+	//include_once $INCLUDE_PATH . 'bd.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -55,6 +55,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 		//
 
 	</style>
+
 <script type="text/javascript" src='/public/includes/datepicker.min.js'></script>
 <script type="text/javascript" src='/public/includes/datepicker.pt-BR.min.js'></script>
 
@@ -65,6 +66,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 	<?php include 'include_css_perm.php'; ?>
 
 </style>
+
 <script type='text/javascript' src='/public/includes/java.js?51'></script>
 <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.3/jquery.mask.min.js'></script>
 <body>
