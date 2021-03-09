@@ -10,8 +10,8 @@ if(php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['REQ
         <div class="container">
             <video id="video" controls preload="auto" width="640" height="360" 
                 poster="poster.png">
-                <source src="stream.php?ext=webm" type='video/webm' />
-                <source src="stream.php?ext=mp4" type='video/mp4' />
+                <source src="public/stream.php?ext=webm" type='video/webm' />
+                <source src="public/stream.php?ext=mp4" type='video/mp4' />
             </video>
         </div>
     </body>

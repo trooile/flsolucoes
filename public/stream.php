@@ -1,9 +1,9 @@
 <?php
-//Determina o caminho do arquivo de acordo com a extensão
+
 if (!isset($_GET['ext']) || $_GET['ext'] == 'mp4') {
- $path = dirname(__FILE__) . '/../resource/video1.mp4';
+ $path = dirname(__FILE__) . '../resource/video1.mp4';
 } else if ($_GET['ext'] == 'webm') {
- $path = dirname(__FILE__) . '/../resource/video1.webm';
+ $path = dirname(__FILE__) . '../resource/video1.webm';
 } else {
  header('HTTP/1.1 400 Bad Request');
  return;
