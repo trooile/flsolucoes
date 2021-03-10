@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS tutorial_item(
   id_tutorial INT NOT NULL,
   PRIMARY KEY (id_tutorial_item),
   CONSTRAINT fk_tutorial_item_tutorial
-    FOREIGN KEY (`id_tutorial`)
+    FOREIGN KEY (id_tutorial)
     REFERENCES tutorial (id_tutorial)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT)
