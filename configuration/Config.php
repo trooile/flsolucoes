@@ -19,54 +19,8 @@ class Config
     {
         $dir = __DIR__;
 
-        if(isset($_SERVER['USER']) && $_SERVER['USER']=='root'){
-            if(isset($_SERVER['HOSTNAME'])){
-                switch ($_SERVER['HOSTNAME']) {
-                    case 'portal.cedet.com.br':
-                    case 'portal.cedet.internal':
-                        $ambiente = "portal";
-                        break;
-
-                    case 'portaldev.cedet.com.br':
-                        $ambiente = "portaldev";
-                        break;
-
-                    default:
-                        printar($_SERVER);
-                        throw new Exception("Parâmetros inválidos para ".$_SERVER['HOSTNAME'], 1);
-                        break;
-                }
-            }
-            else{ //cron nao tem hostname
-                $ambiente = "portal";
-            }
-
-        }
-        else //acesso via web, usa o hostname
-        switch(getenv('HTTP_HOST')){
-            case 'portal.cedet.com.br':
-            case 'portal.cedet.com.br:443':
-            case 'portal-intra.cedet.com.br':
-            case 'portal-intra.cedet.com.br:443':
-                $ambiente = "portal";   
-                break;  
-
-            case 'portaldev.cedet.com.br':
-            case 'portaldev.cedet.com.br:443':
-                $ambiente = "portaldev";
-                break;  
-
-            case 'portal':
-                $ambiente = "portal";
-                break;  
-
-            default:
-                throw new Exception("Parâmetros inválidos 2.", 1);
-                break;
-        }
-
-        switch ($ambiente) {
-            case 'portal':
+        switch ($server) {
+            case 'pti':
                 $database = "localtest";
                 $user = "root";
                 $server = "localhost";
@@ -85,14 +39,11 @@ class Config
                 break;
         }
 
-        $this->path = Array('root' => "C:\wamp64\www\portal",
-                            'bd' => "C:\wamp64\www\portal/includes/bd.php",
-                            'admin' => "C:\wamp64\www\portal/admin/",
-                            'includes' => "C:\wamp64\www\portal/includes/",
-                            'classes' => "C:\wamp64\www\portal/includes/classes/",
-                            'img' => "C:\wamp64\www\portal/img/",
-                            'file' => "C:\wamp64\www\portal/files/",
-                            'tmp' => "C:\wamp64\www\portal/tmp/");
+        $this->path = Array('root' => "C:\wamp64\www\flsolucoes",
+                            'bd' => "C:\wamp64\www\flsolucoes/includes/bd.php",
+                            'admin' => "C:\wamp64\www\flsolucoes/admin/",
+                            'include' => "C:\wamp64\www\flsolucoes/include/",
+                            'images' => "C:\wamp64\www\flsolucoes/images/");
 
         $this->bd = Array('server' => $server, 'user' => $user, 'pass' => $pass, 'database' => $database);
 
@@ -136,86 +87,72 @@ class Config
         mysqli_close($conn);
     }
 
-    public
-    function getDB()
+    public function getDB()
     {
         return $this->bd;
     }
 
-    public
-    function getPath()
+    public function getPath()
     {
         return $this->path;
     }
 
-    public
-    function getDBServer()
+    public function getDBServer()
     {
         return $this->bd['server'];
     }
 
-    public
-    function getDBUser()
+    public function getDBUser()
     {
         return $this->bd['user'];
     }
 
-    public
-    function getDBPass()
+    public function getDBPass()
     {
         return $this->bd['pass'];
     }
 
-    public
-    function getDBName()
+    public function getDBName()
     {
         return $this->bd['database'];
     }
 
-    public
-    function getPathRoot()
+    public function getPathRoot()
     {
         return $this->path['root'];
     }
 
-    public
-    function getPathDB()
+    public function getPathDB()
     {
         return $this->path['bd'];
     }
 
-    public
-    function getPathAdmin()
+    public function getPathAdmin()
     {
         return $this->path['admin'];
     }
 
-    public
-    function getPathIncludes()
+    public function getPathIncludes()
     {
         return $this->path['includes'];
     }
 
-    public
-    function getPathClasses()
+    public function getPathClasses()
     {
         return $this->path['classes'];
     }
 
-    public
-    function getPathImg()
+    public function getPathImg()
     {
         return $this->path['img'];
     }
 
-    public
-    function getPathFile()
+    public function getPathFile()
     {
         return $this->path['file'];
     }
 
-    public
-    function getPathTmp()
+    public function getPathTmp()
     {
         return $this->path['tmp'];
     }
