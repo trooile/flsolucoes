@@ -24,6 +24,9 @@
                     Account
                 </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-item" style="color:#000033" href="/../account/create-account-step1.php">
+                    New Account
+                </a>
                 <a class="nav-item" style="color:#000033" href="/../account/login.php">
                     Login
                 </a>
