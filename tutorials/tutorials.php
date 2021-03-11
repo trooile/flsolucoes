@@ -1,14 +1,18 @@
 <?php 
 
-    include "../include/include.php"; 
+    session_start();
+    include "include_view.php";   
 
 ?>
 
-<div class="container">
+<div class="container"> 
     <a class="btn btn-primary pull-right" href="/tutorials/tutorial_create.php" role="button">
         <span class="glyphicon glyphicon-pencil"></span>
     </a>
 </div>
+
+<p>
+
 <div class="container">
     <div class="jumbotron vertical-center">
         <div class="row" style="margin-top: 15px;">
