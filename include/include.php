@@ -98,7 +98,7 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js"></script>
 			<script src="/public/includes/jquery.maskMoney.min.js"></script>
 			<script src="/public/includes/loadingoverlay.min.js"></script>
-			
+
 			<link href="/public/includes/componentes/select2/css/select2.min.css" rel="stylesheet" />
 			<script src="/public/includes/componentes/select2/js/select2.min.js"></script>
 			<script src="/public/includes/componentes/select2/js/i18n/pt-BR.js"></script>
@@ -154,6 +154,8 @@
 
 			<script type='text/javascript' src='/public/includes/java.js?51'></script>
 			<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.3/jquery.mask.min.js'></script>
+
+			<script type=”text/javascript” src=”//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js”></script>
 
 			<?php
 
