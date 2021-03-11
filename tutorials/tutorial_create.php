@@ -1,6 +1,6 @@
 <?php 
 
-    include "../include/include.php"; 
+    include "/../include/include.php"; 
 
 ?>
 
@@ -23,7 +23,7 @@
 
 <?php 
 
-    include "../include/footer.php";
+    include "/../include/footer.php";
 
 ?>
 

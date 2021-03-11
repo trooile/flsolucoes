@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../tutorials/tutorials.php" tabindex="-1" aria-disabled="true">
+                <a class="nav-link" href="/../tutorials/tutorials.php" tabindex="-1" aria-disabled="true">
                     Tutorials
                 </a>
             </li>
