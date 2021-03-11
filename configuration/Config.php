@@ -11,10 +11,6 @@ class Config
         $bd,
         $path;
 
-    /**
-     * Config constructor.
-     * Detecta automaticamente qual portal você está usando e seta os paths e a configuração do BD automaticamente
-     */
     function __construct()
     {
         $dir = __DIR__;

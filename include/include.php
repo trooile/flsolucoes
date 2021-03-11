@@ -1,9 +1,12 @@
 <?php
+
 	ini_set("display_errors", "1");
 	date_default_timezone_set('America/Sao_Paulo');
 	error_reporting(E_ALL ^ E_DEPRECATED);
 	//include_once $INCLUDE_PATH . 'bd.php';
+
 ?>
+
 <!DOCTYPE html>
 	<html lang="pt">
 		<style>
@@ -53,6 +56,30 @@
 				padding-top: 60px;
 			}
 
+			.vertical-center {
+				height:100%;
+				width:100%;
+
+				text-align: center;  /* align the inline(-block) elements horizontally */
+				font: 0/0 a;         /* remove the gap between inline(-block) elements */
+			}
+
+			.vertical-center:before {    /* create a full-height inline block pseudo=element */
+				content: " ";
+				display: inline-block;
+				vertical-align: middle;    /* vertical alignment of the inline element */
+				height: 100%;
+			}
+
+			.vertical-center > .container {
+				max-width: 100%;
+
+				display: inline-block;
+				vertical-align: middle;  /* vertical alignment of the inline element */
+										/* reset the font property */
+				font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+
 		</style>
 
 		<head>
@@ -60,7 +87,7 @@
 			<title>
 				<?php 
 				
-				echo isset($title) ? $title : "MeltedSplit"; 
+				echo isset($title) ? $title : "Help Yourself"; 
 				
 				?>
 			</title>
