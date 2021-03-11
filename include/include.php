@@ -98,6 +98,7 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js"></script>
 			<script src="/public/includes/jquery.maskMoney.min.js"></script>
 			<script src="/public/includes/loadingoverlay.min.js"></script>
+			
 			<link href="/public/includes/componentes/select2/css/select2.min.css" rel="stylesheet" />
 			<script src="/public/includes/componentes/select2/js/select2.min.js"></script>
 			<script src="/public/includes/componentes/select2/js/i18n/pt-BR.js"></script>
