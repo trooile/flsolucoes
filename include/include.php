@@ -60,23 +60,21 @@
 				height:100%;
 				width:100%;
 
-				text-align: center;  /* align the inline(-block) elements horizontally */
-				font: 0/0 a;         /* remove the gap between inline(-block) elements */
+				text-align: center;  
+				font: 0/0 a;         
 			}
 
-			.vertical-center:before {    /* create a full-height inline block pseudo=element */
+			.vertical-center:before {    
 				content: " ";
 				display: inline-block;
-				vertical-align: middle;    /* vertical alignment of the inline element */
+				vertical-align: middle;  
 				height: 100%;
 			}
 
 			.vertical-center > .container {
 				max-width: 100%;
-
 				display: inline-block;
-				vertical-align: middle;  /* vertical alignment of the inline element */
-										/* reset the font property */
+				vertical-align: middle; 
 				font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
 

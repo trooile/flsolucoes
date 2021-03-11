@@ -1,8 +1,12 @@
-<?php include "../include/include.php" ?>
+<?php 
+
+    include "../include/include.php"; 
+
+?>
 
 <form id="new-tutorial">
     <div class="container">
-        <input class="form-control form-control-lg" type="text" placeholder="Title">
+        <input id="title" name="title" class="form-control form-control-lg" type="text" placeholder="Title">
         <p>
         <div id="editor">
         </div>
@@ -17,7 +21,11 @@
     </div>
 </form>
 
-<?php include "../include/footer.php" ?>
+<?php 
+
+    include "../include/footer.php";
+
+?>
 
 <script>
     var toolbarOptions = [
