@@ -39,7 +39,7 @@
     function generateTable(){
             $.ajax({
                 type: 'POST',
-                url: "/tutotials/actions.php?action=",
+                url: "/tutorials/actions.php?action=",
                 dataType: "json",
 
             }).done(function (return) {
