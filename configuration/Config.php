@@ -83,58 +83,47 @@ class Config
         mysqli_close($conn);
     }
 
-    public function getDB()
-    {
+    public function getDB(){
         return $this->bd;
     }
 
-    public function getPath()
-    {
+    public function getPath(){
         return $this->path;
     }
 
-    public function getDBServer()
-    {
+    public function getDBServer(){
         return $this->bd['server'];
     }
 
-    public function getDBUser()
-    {
+    public function getDBUser(){
         return $this->bd['user'];
     }
 
-    public function getDBPass()
-    {
+    public function getDBPass(){
         return $this->bd['pass'];
     }
 
-    public function getDBName()
-    {
+    public function getDBName(){
         return $this->bd['database'];
     }
 
-    public function getPathRoot()
-    {
+    public function getPathRoot(){
         return $this->path['root'];
     }
 
-    public function getPathDB()
-    {
+    public function getPathDB(){
         return $this->path['bd'];
     }
 
-    public function getPathAdmin()
-    {
+    public function getPathAdmin(){
         return $this->path['admin'];
     }
 
-    public function getPathIncludes()
-    {
+    public function getPathIncludes(){
         return $this->path['includes'];
     }
 
-    public function getPathClasses()
-    {
+    public function getPathClasses(){
         return $this->path['classes'];
     }
 
@@ -143,13 +132,11 @@ class Config
         return $this->path['img'];
     }
 
-    public function getPathFile()
-    {
+    public function getPathFile(){
         return $this->path['file'];
     }
 
-    public function getPathTmp()
-    {
+    public function getPathTmp(){
         return $this->path['tmp'];
     }
 }

@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . "/../configuration/Config.php";
+include_once __DIR__ . "../configuration/Config.php";
 use Configuracoes\Config;
 $Config = new Config();
 $server = $Config->getDBServer();

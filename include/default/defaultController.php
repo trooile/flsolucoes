@@ -88,7 +88,7 @@ Class DefaultController{
                 $this->return['error'] =  true;
                 $this->return['message'] =  'Error: '.$exception->getMessage();
 
-                    $this->return['erroMensagem'] =  $exception->getMessage();
+                    $this->return['errorMenssage'] =  $exception->getMessage();
 
 
                 if($exception->getCode() == -1){

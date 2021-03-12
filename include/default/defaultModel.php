@@ -174,7 +174,7 @@ class DefaultModel
         try{
 
             if(empty($where)){
-                throw new Exception('DELETE sem WHERE no banco de dados',-1);
+                throw new Exception('DELETE nul WHERE no db',-1);
             }
 
             $query =  "DELETE FROM ".$this->table." WHERE ".$where;
