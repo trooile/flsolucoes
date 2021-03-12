@@ -1,6 +1,6 @@
 <?php
 
-    include_once  __DIR__ . '../include/default/defaultController.php';
+    include_once  __DIR__ . '/../include/default/defaultController.php';
 
 Class Controller extends DefaultController{
 

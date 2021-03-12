@@ -1,7 +1,7 @@
 <?php 
 
     session_start();
-    include "/include_view.php";   
+    include "include_view.php";   
 
 ?>
 

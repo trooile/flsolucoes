@@ -1,8 +1,8 @@
 <?php
 
-    include "/controller.php";
+    include "controller.php";
 
     $controller = new Controller(); 
-    include "/../include/include.php";
+    include "../include/include.php";
 
 ?>
