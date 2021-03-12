@@ -1,4 +1,3 @@
-
 CREATE TABLE IF NOT EXISTS payment(
   id_payment INT NOT NULL AUTO_INCREMENT,
   id_payment_order INT NOT NULL,
