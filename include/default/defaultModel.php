@@ -156,7 +156,7 @@ class DefaultModel
         try{
 
             if(empty($where)){
-                throw new Exception('UPDATE sem WHERE no banco de dados',-1);
+                throw new Exception('UPDATE nul WHERE no db',-1);
             }
             
             $query =  $this->prepareUpdate($params, $where);
