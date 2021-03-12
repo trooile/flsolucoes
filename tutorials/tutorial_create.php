@@ -10,13 +10,13 @@
 
 <form id="new-tutorial">
     <div class="container">
-        <input id="title" name="title" class="form-control form-control-lg" type="text" placeholder="Title">
+        <input style="width:100%; height:40px; font-size:30px" id="title" name="title" class="form-control form-control-lg" type="text" placeholder="Title">
         <p>
         <div id="editor">
         </div>
         <p>
         <div class="form-group form-control-lg">
-                <input type="file" class="form-control-file" id="file-input">
+            <input type="file" class="form-control-file" id="file-input">
         </div>
         <br></br>
         <button type="button" id="submittutorial" class="btn btn-primary btn-lg pull-right">
