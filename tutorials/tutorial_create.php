@@ -7,6 +7,11 @@
     include "../include/include.php";
 
 ?>
+<div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="display-4">Create Tutorial</h1>
+    </div>
+</div>
 
 <form id="new-tutorial">
     <div class="container">
