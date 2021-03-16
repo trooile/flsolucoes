@@ -1,16 +1,5 @@
-CREATE TABLE IF NOT EXISTS payment(
-  id_payment INT NOT NULL AUTO_INCREMENT,
-  id_payment_order INT NOT NULL,
-  PRIMARY KEY (id_payment),
-  CONSTRAINT fk_payment_payment_order
-    FOREIGN KEY (id_payment_order)
-    REFERENCES payment_order (id_payment_order)
-    ON DELETE RESTRICT
-    ON UPDATE RESTRICT)
-ENGINE = InnoDB;
-
 CREATE TABLE IF NOT EXISTS user_type(
-  id_user_type INT NOT NULL AUTO_INCREMENT,
+  id_user_type INT NOT NULL AUTO_INCREMENT,payment
   name_type VARCHAR(45) NULL,
   PRIMARY KEY (id_user_type))
 ENGINE = InnoDB;
