@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-    $title='Create';
-    
+    $title='Create Tutorial';
+
     $showDataTables=1;
     include "controller.php";
 

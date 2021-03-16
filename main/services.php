@@ -1,6 +1,7 @@
 <?php 
 
     session_start();
+    $title='Services';
     include "include_view.php";   
 
 ?>

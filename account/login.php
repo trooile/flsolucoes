@@ -1,6 +1,7 @@
 <?php 
 
     session_start();
+    $title='Login';
     include "include_view.php";   
 
 ?>

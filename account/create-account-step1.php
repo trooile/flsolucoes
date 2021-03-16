@@ -1,6 +1,7 @@
 <?php 
 
     session_start();
+    $title='Step 1';
     include "include_view.php";   
 
 ?>
