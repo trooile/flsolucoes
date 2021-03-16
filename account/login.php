@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-8">
-            <button type="submit" name="submit" class="btn btn-primary">Enter</button>
+            <button type="submit" name="submit" class="btn btn-primary btn-lg">Enter</button>
           </div>
         </div>
       </form>
