@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS payment_order(
   CONSTRAINT fk_payment_order_payment_type
     FOREIGN KEY (id_payment_type)
     REFERENCES payment_type (id_payment_type)
-    ON DELETE RESTRICT
+    ON DELETE RESTRICTcolaborator
     ON UPDATE RESTRICT)
 ENGINE = InnoDB;
 
