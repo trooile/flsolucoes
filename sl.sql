@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS user_type(
-  id_user_type INT NOT NULL AUTO_INCREMENT,payment
+  id_user_type INT NOT NULL AUTO_INCREMENT,
   name_type VARCHAR(45) NULL,
   PRIMARY KEY (id_user_type))
 ENGINE = InnoDB;

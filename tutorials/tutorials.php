@@ -1,6 +1,7 @@
 <?php 
 
     session_start();
+    $title = 'Tutorials';
     include "include_view.php";   
 
 ?>

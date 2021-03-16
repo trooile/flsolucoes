@@ -1,5 +1,8 @@
 <?php
 
+    session_start();
+    $title='Create';
+    
     $showDataTables=1;
     include "controller.php";
 
