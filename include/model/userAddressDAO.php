@@ -22,3 +22,5 @@ class UserAddressDAO extends DefaultModel
 			throw $e;
 		}
     }
+}
+?>
