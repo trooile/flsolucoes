@@ -48,7 +48,7 @@ Class Controller extends DefaultController{
             $this->userTypeDAO = new UserTypeDAO($this->masterMysqli);
             $this->viewTutorialDAO = new ViewTutorialDAO($this->masterMysqli);
 
-            $this->return = array('error'=> false, 'data'=> array(), 'menssage'=>'');
+            $this->return = array('error'=> false, 'data'=> array(), 'message'=>'');
 
         }catch(Exception $e){
             $this->return($e);
