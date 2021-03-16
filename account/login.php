@@ -10,7 +10,7 @@
   <div class="d-flex align-self-center">
     <div class="col-lg-6 col-lg-offset-3 text-center well" style='margin-top: 20px;'>
       <!-- <div class='center-block text-center'>
-        <img src='/img/logo.jpg' class="img-rounded" style='margin-bottom: 15px;height: 50px;'>
+        <img src='/../imges/logo.jpg' class="img-rounded" style='margin-bottom: 15px;height: 50px;'>
       </div> -->
       <form class="form-horizontal" role="form"  method='post'>
         <div class="form-group">
