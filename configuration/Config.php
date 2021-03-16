@@ -17,7 +17,7 @@ class Config
 
         switch ($server) {
             case 'pti':
-                $database = "localtest";
+                $database = "localtest7";
                 $user = "root";
                 $server = "localhost";
                 $pass = "";
@@ -44,15 +44,11 @@ class Config
         $this->bd = Array('server' => $server, 'user' => $user, 'pass' => $pass, 'database' => $database);
 
         if(getenv('APPLICATION_ENV') == 'local'){
-            $this->bd = Array('server' => "localhost", 'user' => 'root', 'pass' => "", 'database' => 'localtest');
+            $this->bd = Array('server' => "localhost", 'user' => 'root', 'pass' => "", 'database' => 'localtest7');
             $this->path = Array('root' => "/",
                                 'bd' => "includes/bd.php",
-                                'admin' => "admin/",
-                                'includes' => "includes/",
-                                'classes' => "includes/classes/",
-                                'img' => "img/",
-                                'file' => "files/",
-                                'tmp' => "tmp/");
+                                'include' => "include/",
+                                'images' => "images/");
         }
     }
 
@@ -115,28 +111,12 @@ class Config
         return $this->path['bd'];
     }
 
-    public function getPathAdmin(){
-        return $this->path['admin'];
-    }
-
     public function getPathIncludes(){
-        return $this->path['includes'];
-    }
-
-    public function getPathClasses(){
-        return $this->path['classes'];
+        return $this->path['include'];
     }
 
     public function getPathImg()
     {
-        return $this->path['img'];
-    }
-
-    public function getPathFile(){
-        return $this->path['file'];
-    }
-
-    public function getPathTmp(){
-        return $this->path['tmp'];
+        return $this->path['images'];
     }
 }
