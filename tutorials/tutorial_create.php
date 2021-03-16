@@ -39,7 +39,8 @@
 
 ?>
 
-<script>
+<script type="text/javascript">
+
     var toolbarOptions = [
     [ 'bold', 'italic' , 'underline' , 'strike' ],        
     [ 'blockquote' , 'code-block' ],
@@ -62,28 +63,29 @@
 
     [ 'clean' ]
 
-];
+    ];
 
-var quill = new Quill('#editor', {
-    modules: {
-        toolbar: toolbarOptions
-    },
-    theme: 'snow',
-    modules: {
-        toolbar: {
-            container: toolbarOptions,
-            handlers: {
-                image: imageHandler
+    var quill = new Quill('#editor', {
+        modules: {
+            toolbar: toolbarOptions
+        },
+        theme: 'snow',
+        modules: {
+            toolbar: {
+                container: toolbarOptions,
+                handlers: {
+                    image: imageHandler
+                }
             }
-        }
-    },
-});
+        },
+    });
 
-function imageHandler() {
-    var range = this.quill.getSelection();
-    var value = prompt('Please copy paste the image url here!');
-    if(value){
-        this.quill.insertEmbed(range.index, 'image', value, Quill.sources.USER);
+    function imageHandler() {
+        var range = this.quill.getSelection();
+        var value = prompt('Please copy paste the image url here!');
+        if(value){
+            this.quill.insertEmbed(range.index, 'image', value, Quill.sources.USER);
+        }
     }
-}
+
 </script>
