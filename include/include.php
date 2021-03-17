@@ -3,13 +3,13 @@
 	ini_set("display_errors", "1");
 	date_default_timezone_set('America/Sao_Paulo');
 	error_reporting(E_ALL ^ E_DEPRECATED);
-	//include_once $INCLUDE_PATH . 'bd.php';
 
 ?>
 
 <!DOCTYPE html>
 	<html lang="pt">
-		<style>
+		
+		<style type='text/css'>
 
 			.navbar {
 				background-color: #000033;
@@ -88,7 +88,7 @@
 				background-color: #000033;
 				overflow-x: hidden;
 				transition: 0.5s;
-				padding-top: 100px;
+				padding-top: 60px;
 			}
 
 			.sidenav a {
@@ -106,13 +106,13 @@
 
 			.sidenav .closebtn {
 				position: absolute;
-				top: 60px;
+				top: 30px;
 				right: 25px;
 				font-size: 15px;
 				margin-left: 50px;
 			}
 
-			@media screen and (max-height: 450px) {
+			@media screen and (max-height: 600px) {
 				.sidenav {padding-top: 15px;}
 				.sidenav a {font-size: 18px;}
 			}
@@ -128,6 +128,7 @@
 				
 				?>
 			</title>
+
 			<meta charset="utf-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -170,17 +171,12 @@
 			<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 			<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-				<style type='text/css'>
-					
-					@import url('/public/includes/datepicker.min.css');
-
-				</style>
-
 			<script type="text/javascript" src='/public/includes/datepicker.min.js'></script>
 			<script type="text/javascript" src='/public/includes/datepicker.pt-BR.min.js'></script>
 
 			<style type='text/css'>
-
+				
+				@import url('/public/includes/datepicker.min.css');
 				@import url('/public/includes/estilo.css?12');
 
 				<?php 
@@ -203,27 +199,5 @@
 			?>
 
 		</head>
-
-		<div id="sidenav" class="sidenav">
-			<a href="/main/about.php">About</a>
-			<a href="/main/services.php">Services</a>
-			<a href="/main/contact.php">Contact</a>
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		</div>
-
-		<button class="btn btn-mdb-color" role="button" style="font-size:25px ;cursor:pointer" onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
-
 	</html>
 </html>
-
-<script>
-
-    function openNav() {
-        document.getElementById("sidenav").style.width = "150px";
-    }
-
-    function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-    }
-
-</script>

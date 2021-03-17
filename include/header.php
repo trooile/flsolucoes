@@ -1,6 +1,16 @@
 <html lang="pt">
 
     <nav class="navbar navbar-expand-lg sticky-top navbar-fixed-top">
+        
+        <div id="sidenav" class="sidenav">
+            <a href="/main/about.php">About</a>
+            <a href="/main/services.php">Services</a>
+            <a href="/main/contact.php">Contact</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+
+        <button class="btn btn-mdb-color" role="button" style="font-size:25px ;cursor:pointer; color:#FFFFFF" onclick="openNav()"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+
         <div class="container-fluid">
         <!-- <a class="navbar-brand" href="../index.php"><img src="/../images/logo.png" class="w-20 p-3"></a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,3 +47,15 @@
     </nav>
 
 </html>
+
+<script>
+
+    function openNav() {
+        document.getElementById("sidenav").style.width = "150px";
+    }
+
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+    }
+
+</script>
